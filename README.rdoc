@@ -1,10 +1,34 @@
-= audit
+= Audit
 
-A simple gem built for Rails 3+ which creates an audit when events that you configure occur. The events you can audit are:
+A simple gem built for Rails 3+ which creates an audit record when users trigger events you flag. The events you can trigger audit on are:
 
-1. Attributes changing in a model
-2. Methods called on a model
-3. Methods called on some other class like a controller.
+1. When attributes changing in a model
+2. When specific methods of a class are executed
+3. When you trigger an AuditRecord through code as part of a manual audit process
+
+== Installation
+
+In Gemfile:
+
+gem "audit"
+
+In your application root, run:
+
+$ bundle install
+
+Generate the migration:
+
+If installing without a previous version of acts_as_audited or you do not mind overwriting your audits table:
+$ rails g audit:install
+
+After running one of the generators:
+$ rake db:migrate
+
+== Usage
+
+class User < ActiveRecord::Base
+  audit :attributes => [:name, :is_admin], :methods => [:unlock_account!, :destroy]
+end
 
 == Contributing to audit
  
