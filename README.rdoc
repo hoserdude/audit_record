@@ -1,6 +1,10 @@
 = audit
 
-Description goes here.
+A simple gem built for Rails 3+ which creates an audit when events that you configure occur. The events you can audit are:
+
+1. Attributes changing in a model
+2. Methods called on a model
+3. Methods called on some other class like a controller.
 
 == Contributing to audit
  

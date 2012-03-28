@@ -17,8 +17,13 @@ Jeweler::Tasks.new do |gem|
   gem.name = "audit"
   gem.homepage = "http://github.com/heavysixer/audit"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A gem that creates audit records around events you define}
+  gem.description = %Q{A simple gem built for Rails 3+ which creates an audit when events that you configure occur. The events you can audit are:
+
+  1. Attributes changing in a model
+  2. Methods called on a model
+  3. Methods called on some other class like a controller.
+}
   gem.email = "mark@humansized.com"
   gem.authors = ["Mark Daggett"]
   # dependencies defined in Gemfile
@@ -30,14 +35,6 @@ Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
-end
-
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
 end
 
 task :default => :test
