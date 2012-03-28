@@ -16,6 +16,12 @@ A simple gem built for Rails 3+ which creates an audit when events that you conf
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
+== Special Thanks
+Audit was initially based off of the approach taken by acts_as_audited:
+https://github.com/collectiveidea/acts_as_audited
+
+This looks like an excellent gem, but my goal was to strip features down as much as possible and lock audits (where possible) to the model layer.
+
 == Copyright
 
 Copyright (c) 2012 Mark Daggett. See LICENSE.txt for
