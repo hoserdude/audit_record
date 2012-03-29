@@ -34,7 +34,7 @@ Guardfile
 # For TextMate
 #*.tmproj
 #tmtags
-
+audit.gemspec
 # For emacs:
 #*~
 #\#*
