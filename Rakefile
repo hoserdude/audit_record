@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "audit_record"
-  gem.homepage = "http://github.com/heavysixer/audit"
+  gem.homepage = "http://github.com/heavysixer/audit_record"
   gem.license = "MIT"
   gem.summary = %Q{A gem that creates audit records around events you define}
   gem.description = %Q{A simple gem built for Rails 3+ which creates an audit when events that you configure occur. The events you can audit are:
