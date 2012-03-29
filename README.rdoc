@@ -26,9 +26,9 @@ $ rake db:migrate
 
 == Usage
 
-class User < ActiveRecord::Base
-  audit :attributes => [:name, :is_admin], :methods => [:unlock_account!, :destroy]
-end
+  class User < ActiveRecord::Base
+    audit :attributes => [:name, :is_admin], :methods => [:unlock_account!, :destroy]
+  end
 
 == Contributing to audit
  
