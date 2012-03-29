@@ -1,4 +1,4 @@
-= Audit
+= Audit Record
 
 A simple gem built for Rails 3+ which creates an audit record when users trigger events you flag. The events you can trigger audit on are:
 
@@ -10,7 +10,7 @@ A simple gem built for Rails 3+ which creates an audit record when users trigger
 
 In Gemfile:
 
-gem "audit"
+gem "audit_record"
 
 In your application root, run:
 
