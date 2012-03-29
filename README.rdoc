@@ -18,9 +18,6 @@ $ bundle install
 
 Generate the migration:
 
-If installing without a previous version of acts_as_audited or you do not mind overwriting your audits table:
-$ rails g audit:install
-
 After running one of the generators:
 $ rake db:migrate
 
