@@ -41,10 +41,10 @@ end
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
 == Special Thanks
-Audit was initially based off of the approach taken by acts_as_audited:
+Much of Audit was inspired by acts_as_audited, which is a fine gem in its own right.
 https://github.com/collectiveidea/acts_as_audited
 
-This looks like an excellent gem, but my goal was to strip features down as much as possible and lock audits (where possible) to the model layer.
+However, my goal was to strip features down as much as possible and lock audits (where possible) to the model methods and attributes.
 
 == Copyright
 

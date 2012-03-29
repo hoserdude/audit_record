@@ -1,5 +1,4 @@
 require "#{File.dirname(__FILE__)}/audit_record"
-require "#{File.dirname(__FILE__)}/audit_record_sweeper"
 module Auditable
   module Auditor
     def self.included(base)
@@ -77,6 +76,7 @@ module Auditable
   end
 
   if defined?(ActionController) and defined?(ActionController::Base)
+    require "#{File.dirname(__FILE__)}/audit_record_sweeper"
     ActionController::Base.class_eval do
       cache_sweeper :audit_record_sweeper
     end
