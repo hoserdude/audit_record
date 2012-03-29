@@ -14,7 +14,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "audit"
+  gem.name = "audit_record"
   gem.homepage = "http://github.com/heavysixer/audit"
   gem.license = "MIT"
   gem.summary = %Q{A gem that creates audit records around events you define}
