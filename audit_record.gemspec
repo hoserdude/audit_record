@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "audit_record.gemspec",
     "lib/audit.rb",
     "lib/auditable/audit_record.rb",
     "lib/auditable/audit_record_sweeper.rb",
@@ -36,7 +37,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/heavysixer/audit"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
+  s.rubygems_version = "1.8.21"
   s.summary = "A gem that creates audit records around events you define"
 
   if s.respond_to? :specification_version then
