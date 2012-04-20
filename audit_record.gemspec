@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "audit_record"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mark Daggett"]
-  s.date = "2012-03-29"
+  s.date = "2012-04-20"
   s.description = "A simple gem built for Rails 3+ which creates an audit when events that you configure occur. The events you can audit are:\n\n  1. Attributes changing in a model\n  2. Methods called on a model\n  3. Methods called on some other class like a controller.\n"
   s.email = "mark@humansized.com"
   s.extra_rdoc_files = [
@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "audit_record.gemspec",
-    "lib/audit.rb",
+    "lib/audit_record.rb",
     "lib/auditable/audit_record.rb",
     "lib/auditable/audit_record_sweeper.rb",
     "lib/auditable/auditor.rb",
