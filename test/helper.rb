@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler'
 require 'rails'
 require 'active_record' 
+require 'ruby-debug'
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -14,7 +15,7 @@ require 'shoulda'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'audit'
+require 'audit_record'
 
 ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
 
@@ -23,6 +24,11 @@ ActiveRecord::Schema.define(:version => 1) do
     t.string :name
     t.boolean :is_admin, :default => false
   end
+
+  create_table :comments, :force => true do |t|
+    t.string :body
+  end
+
   create_table "audit_records", :force => true do |t|
     t.integer  "user_id"
     t.string   "action"
@@ -41,6 +47,11 @@ end
 class User < ActiveRecord::Base
   audit :methods => [:destroy], :attributes => [:is_admin]
 end
+
+class Comment < ActiveRecord::Base
+  audit :attributes => [:name]
+end
+
 class ActiveSupport::TestCase
   fixtures :all
   self.use_transactional_fixtures = true

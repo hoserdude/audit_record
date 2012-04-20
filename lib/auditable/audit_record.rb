@@ -16,6 +16,8 @@
 class AuditRecord < ActiveRecord::Base
   serialize :modifications
   belongs_to :user
+  attr_accessible :action, :auditable_id, :auditable_type, :modifications, :remote_address, :user_id
+
   class << self
     def create_for(record)
       unless record.audited_attribute_changes.empty?
