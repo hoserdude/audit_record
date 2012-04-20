@@ -21,7 +21,7 @@ module Auditable
       end
 
       def copy_migration
-        migration_template 'install.rb', 'db/migrate/install_audit.rb'
+        migration_template 'install.rb', 'db/migrate/install_audit_record.rb'
       end
     end
   end

@@ -1,4 +1,4 @@
-class <%= migration_class_name %> < ActiveRecord::Migration
+class InstallAuditRecord < ActiveRecord::Migration
   def change
     create_table :audit_records do |t|
       t.integer :user_id, :allow_nil => false
