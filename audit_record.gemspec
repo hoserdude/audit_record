@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "audit_record"
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mark Daggett"]
@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
     "lib/auditable/audit_record.rb",
     "lib/auditable/audit_record_sweeper.rb",
     "lib/auditable/auditor.rb",
-    "lib/generators/auditable/templates/install.rb",
+    "lib/generators/audit_record/templates/install.rb",
     "lib/generators/install_generator.rb",
     "test/audit_test.rb",
     "test/helper.rb"
